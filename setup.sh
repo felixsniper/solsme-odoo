@@ -14,7 +14,7 @@ apt-get install -y libsasl2-dev python-dev libldap2-dev libssl-dev
 apt-get install -y postgresql-10-postgis-scripts
 
 # Felix - Install add-ons == Copy your addon.zip to addons repository
-#cp -r /root/odoo-solsme/addons /usr/lib/python3/dist-packages/odoo/
+#cp -r /root/solsme-odoo/addons /usr/lib/python3/dist-packages/odoo/
 #cd /usr/lib/python3/dist-packages/odoo/addons/
 #unzip -o \*.zip
 #rm -rf *.zip
@@ -22,7 +22,7 @@ apt-get install -y postgresql-10-postgis-scripts
 
 # Install essential add-ons
 pip3 install wheel
-pip3 install -r odoo/requirements.txt
+pip3 install -r /usr/lib/python3/dist-packages/odoo/requirements.txt
 pip3 install phonenumbers bokeh
 pip3 install git+https://github.com/aeroo/currency2text.git
 pip3 install psycogreen psycopg2-binary
@@ -40,14 +40,14 @@ apt-get -f -y install
 cd ~
 
 #FODO-0002: Fix POS LOGO and Webtitle on Odoo 12
-cp /root/odoo-solsme/fixed/pos/logo.png /usr/lib/python3/dist-packages/odoo/addons/point_of_sale/static/src/img/
-cp /root/odoo-solsme/fixed/pos/pos_templates.xml /usr/lib/python3/dist-packages/odoo/addons/point_of_sale/views/
+cp /root/solsme-odoo/fixed/pos/logo.png /usr/lib/python3/dist-packages/odoo/addons/point_of_sale/static/src/img/
+cp /root/solsme-odoo/fixed/pos/pos_templates.xml /usr/lib/python3/dist-packages/odoo/addons/point_of_sale/views/
 
 #FODO-0003: Fix Odoo Database Page and Webtitle on Odoo 12
-cp /root/odoo-solsme/fixed/database/logo.png /usr/lib/python3/dist-packages/odoo/addons/web/static/src/img/
-cp /root/odoo-solsme/fixed/database/favicon.ico /usr/lib/python3/dist-packages/odoo/addons/web/static/src/img/
-cp /root/odoo-solsme/fixed/database/database_manager.html  /usr/lib/python3/dist-packages/odoo/addons/web/views/
+cp /root/solsme-odoo/fixed/database/logo.png /usr/lib/python3/dist-packages/odoo/addons/web/static/src/img/
+cp /root/solsme-odoo/fixed/database/favicon.ico /usr/lib/python3/dist-packages/odoo/addons/web/static/src/img/
+cp /root/solsme-odoo/fixed/database/database_manager.html  /usr/lib/python3/dist-packages/odoo/addons/web/views/
 
 #FODO-0004: Remove Odoo content on the first installation
-cp /root/odoo-solsme/fixed/web/webclient_templates.xml  /usr/lib/python3/dist-packages/odoo/addons/web/views/
-cp /root/odoo-solsme/fixed/web/abstract_web_client.js  /usr/lib/python3/dist-packages/odoo/addons/web/static/src/js/chrome/
+cp /root/solsme-odoo/fixed/web/webclient_templates.xml  /usr/lib/python3/dist-packages/odoo/addons/web/views/
+cp /root/solsme-odoo/fixed/web/abstract_web_client.js  /usr/lib/python3/dist-packages/odoo/addons/web/static/src/js/chrome/
