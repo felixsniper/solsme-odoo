@@ -1,0 +1,1 @@
+# solsme-odoo
